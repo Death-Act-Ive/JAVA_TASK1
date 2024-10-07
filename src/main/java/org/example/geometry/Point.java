@@ -4,8 +4,8 @@ import java.util.logging.Level;
 import java.util.logging.Logger;
 
 public class Point {
-    private float x;
-    private float y;
+    private double x;
+    private double y;
     private CalculateY calcFunc;
 
     private static final Logger log = Logger.getLogger(Point.class.getName());
@@ -15,12 +15,12 @@ public class Point {
         this.y = 0;
     }
 
-    public Point(float x, float y){
+    public Point(double x, double y){
         this.x = x;
         this.y = y;
     }
 
-    public Point(float x, CalculateY calcFunc) {
+    public Point(double x, CalculateY calcFunc) {
         this.x = x;
         this.calcFunc = calcFunc;
         try{
@@ -31,7 +31,7 @@ public class Point {
         }
     }
 
-    float calculateY(float x){
+    double calculateY(double x){
         return this.calcFunc.calculateYByFormula(x);
     }
 
