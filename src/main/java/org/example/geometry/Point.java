@@ -25,14 +25,35 @@ public class Point {
         this.calcFunc = calcFunc;
         try{
             this.y = this.calculateY(this.x);
-            System.out.println("x="+this.x+"; y="+this.y);
+            this.print();
         } catch (Exception e) {
-            log.log(Level.SEVERE, "Passed object unable to compute y value. Exception: ", e);
+            log(e);
         }
     }
 
-    double calculateY(double x){
+    public double getX() {
+        return x;
+    }
+
+    public double getY() {
+        return y;
+    }
+
+    public void setXYbyX(double x) {
+        this.x = x;
+        this.y = calculateY(this.x);
+    }
+
+    public void print(){
+        System.out.println("[x="+this.x+"; y="+this.y+"]");
+    }
+
+    public double calculateY(double x){
         return this.calcFunc.calculateYByFormula(x);
+    }
+
+    private void log(Exception e){
+        log.log(Level.SEVERE, "Passed object unable to compute 'y' value. Exception: ", e);
     }
 
 }
