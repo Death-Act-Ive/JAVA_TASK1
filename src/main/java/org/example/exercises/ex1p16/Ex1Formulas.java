@@ -1,5 +1,5 @@
 //
-// Ex. 1 p.16-17
+// Ex. 1 p.16-17 formulas
 //
 
 package org.example.exercises.ex1p16;
@@ -103,21 +103,28 @@ public class Ex1Formulas {
 
     public static double f8(double x) {
         double y;
-        y = x * 36
+        y = Math.acos(  Math.pow((Math.pow(x,1.0/5)) / (Math.pow(x,1.0/5)+1),9)  ) +
+                Math.pow(   Math.log(Math.pow(4,Math.tan(3*x)) + Math.sqrt(Math.abs(3*x-1)) + Math.pow(Math.abs(x),Math.sin(2*x))) / Math.log(5),2  )
         ;
         return y;
     }
 
     public static double f9(double x) {
         double y;
-        y = x * 36
+        y = Math.sqrt(Math.pow((Math.abs(Math.acos(  (Math.cos(Math.pow(Math.abs(x),1.0/9))) / (Math.pow(Math.cos(Math.pow(Math.abs(x),1.0/9)),2)+7) ))),9)) +
+                Math.log10(     Math.pow(2,Math.sin(3*x-1)) + Math.pow(3,Math.tan(x))    )
         ;
         return y;
     }
 
     public static double f10(double x) {
         double y;
-        y = x * 36
+        y = Math.cbrt(
+                Math.abs(
+                    Math.asin(  Math.pow(x,8) / (Math.pow(x,8)+3)  ) +
+                    (Math.log(   Math.pow(2,Math.cos(Math.sqrt(Math.abs(x+1)))) + Math.pow(Math.abs(x+1),5*Math.sin(3*x+1))  ) / Math.log(4))
+                )
+        )
         ;
         return y;
     }
