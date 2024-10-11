@@ -8,38 +8,41 @@
 package org.example;
 
 import org.example.geometry.*;
-import org.example.exercises.ex1p16.Ex1Formulas;
+import org.example.exercises.ex1p16.testInit;
 
-import javax.sound.midi.SysexMessage;
+import java.util.Scanner;
+
 
 public class Main {
 
-    // TODO: Add array mapping init.-n for fast point and figure matching;
-    //
-    // TODO: Probably, rebuild project packages hierarchy
-    //
     // TODO: Add conceptual description  of solving;
     //
     // TODO: Add simple doc(?)
 
     public static void main(String[] args) {
-        Point p1 = new Point(0, Ex1Formulas::f1);
-        Point p2 = new Point(1, Ex1Formulas::f2);
-        Point p3 = new Point(1.5, Ex1Formulas::f3);
-        Point p4 = new Point(4, Ex1Formulas::f4);
-        Point p5 = new Point(8, Ex1Formulas::f5);
-        Point p6 = new Point(9, Ex1Formulas::f6);
-        Point p7 = new Point(-26.9, Ex1Formulas::f7);
-        Point p8 = new Point(0.75, Ex1Formulas::f8);
-        Point p9 = new Point(1, Ex1Formulas::f9);
-        Point p10 = new Point(2, Ex1Formulas::f10);
+        final Scanner in = new Scanner(System.in);
 
-        Square sq1 = new Square(0, 0, 3);
-        Rectangle rect1 = new Rectangle(0, 0, 3);
-        Semicircle circ1 = new Semicircle(0,0, 5, "");
-        Triangle tr1 = new Triangle(0,0,0,1,1,0);
-        Figure fig1 = new Figure (tr1);
-        fig1.print();
-        System.out.println(fig1.checkPointIncluded(p1));
+        // formulas to calculate point's Y by X
+        Formula [] formulasArray = testInit.initFormulasArray();
+
+        // points
+        Point [] pArray = testInit.initPointsArray();
+
+        // figures
+        Figure [] figArray = testInit.initFiguresArray();
+
+        System.out.println("{Ex1.p16-17}");
+
+        // mathching
+        for(int i = 0; i < pArray.length; i++){
+            System.out.println("["+(i+1)+"]"+" Please, set X for current point:");
+            figArray[i].print();
+
+            double curX = in.nextDouble();
+            pArray[i] = new Point(curX, formulasArray[i]);
+            pArray[i].print();
+
+            System.out.println(figArray[i].checkPointIncluded(pArray[i]));
+        }
     }
 }

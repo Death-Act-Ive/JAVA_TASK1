@@ -63,7 +63,6 @@ public class Semicircle implements Area{
                         "     Quarters=" + this.quarters + "\n" +
                         "]"
         );
-        return;
     }
 
     public void setQuarters(String quarters) {

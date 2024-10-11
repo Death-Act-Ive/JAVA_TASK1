@@ -25,7 +25,6 @@ public class Point {
         this.calcFunc = calcFunc;
         try{
             this.y = this.calculateYByX(this.x);
-            this.print();   // TODO: DELETE
         } catch (Exception e) {
             log(e);
         }
@@ -58,7 +57,7 @@ public class Point {
     }
 
     public void print(){
-        System.out.println("[x="+this.x+"; y="+this.y+"]");
+        System.out.println("Point [x="+this.x+"; y="+this.y+"]");
     }
 
     public double calculateYByX(double x){

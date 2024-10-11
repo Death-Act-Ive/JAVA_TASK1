@@ -13,22 +13,22 @@ public class Figure implements Area {
 
     public boolean checkPointIncluded(Point point){
         try {
-            if(packedObject instanceof Rectangle){
+            if(packedObject.getClass() == Rectangle.class){
                 Rectangle unpackedObject = (Rectangle) packedObject;
                 return unpackedObject.checkPointIncluded(point);
             }
 
-            else if(packedObject instanceof Square){
+            else if(packedObject.getClass() == Square.class){
                 Square unpackedObject = (Square) packedObject;
                 return unpackedObject.checkPointIncluded(point);
             }
 
-            else if(packedObject instanceof Semicircle){
+            else if(packedObject.getClass() == Semicircle.class){
                 Semicircle unpackedObject = (Semicircle) packedObject;
                 return unpackedObject.checkPointIncluded(point);
             }
 
-            else if(packedObject instanceof Triangle){
+            else if(packedObject.getClass() == Triangle.class){
                 Triangle unpackedObject = (Triangle) packedObject;
                 return unpackedObject.checkPointIncluded(point);
             }
@@ -41,29 +41,31 @@ public class Figure implements Area {
     }
 
     public void print(){
-        if(packedObject instanceof Square){
+        if(packedObject.getClass() == Square.class){
             Square unpackedObj = (Square) packedObject;
             unpackedObj.print();
         }
 
-        if(packedObject instanceof Rectangle){
+        if(packedObject.getClass() == Rectangle.class){
             Rectangle unpackedObj = (Rectangle) packedObject;
             unpackedObj.print();
+            return;
         }
 
-        if(packedObject instanceof Semicircle){
+        if(packedObject.getClass() == Semicircle.class){
             Semicircle unpackedObj = (Semicircle) packedObject;
             unpackedObj.print();
+            return;
         }
 
-        if(packedObject instanceof Triangle){
+        if(packedObject.getClass() == Triangle.class){
             Triangle unpackedObj = (Triangle) packedObject;
             unpackedObj.print();
+            return;
         }
     }
 
     private void log(Exception e){
         log.log(Level.SEVERE, "Passed object unable to compute including. Exception: ", e);
-        return;
     }
 }

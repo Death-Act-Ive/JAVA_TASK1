@@ -40,6 +40,5 @@ public class Triangle implements Area{
                         "     V3("+this.v3.getX()+";"+this.v3.getY()+"),\n" +
                         "]"
         );
-        return;
     }
 }

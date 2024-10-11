@@ -14,12 +14,22 @@ public class Rectangle implements Area{
         this.width = width;
         this.height = height;
         this.angle = rotationAngle;
+
+        this.v1 = new Point();
+        this.v2 = new Point();
+        this.v3 = new Point();
+        this.v4 = new Point();
         this.calculateVertices();
     }
     public Rectangle(double cX, double cY, double width, double height){
         this.cV = new Point(cX, cY);
         this.width = width;
         this.height = height;
+
+        this.v1 = new Point();
+        this.v2 = new Point();
+        this.v3 = new Point();
+        this.v4 = new Point();
         this.calculateVertices();
     }
 
@@ -27,6 +37,11 @@ public class Rectangle implements Area{
         this.cV = new Point(cX, cY);
         this.width = width;
         this.height = width;
+
+        this.v1 = new Point();
+        this.v2 = new Point();
+        this.v3 = new Point();
+        this.v4 = new Point();
         this.calculateVertices();
     }
 
@@ -85,13 +100,32 @@ public class Rectangle implements Area{
     }
 
     private void calculateVertices(){
-        // initialization
-        v1 = new Point();
-        v2 = new Point();
-        v3 = new Point();
-        v4 = new Point();
-
         // calculation vertices before rotation
+        double cX = this.cV.getX();
+        double cY = this.cV.getY();
+
+        this.v1.setX(cX-this.width /2);
+        this.v1.setY(cY+this.height /2);
+
+        this.v2.setX(cX+this.width /2);
+        this.v2.setY(cY+this.height /2);
+
+        this.v3.setX(cX+this.width /2);
+        this.v3.setY(cY-this.height /2);
+
+        this.v4.setX(cX-this.width /2);
+        this.v4.setY(cY-this.height /2);
+
+        // rotation
+        // x' = x*cos(angle) - y*sin(angle) + centerCoordX
+        // y' = x*sin(angle) + y*cos(angle) + centerCoordY
+        if(this.angle != 0){
+            rotate(this.angle);
+        }
+    }
+
+    public void rotate(double angle){
+        this.angle = angle;
         double cX = this.cV.getX();
         double cY = this.cV.getY();
 
@@ -107,15 +141,12 @@ public class Rectangle implements Area{
         double x4 = cX-this.width /2;
         double y4 = cY-this.height /2;
 
-        // rotation
-        // x' = x*cos(angle) - y*sin(angle)
-        // y' = x*sin(angle) + y*cos(angle)
-        this.v1.setXY(x1*Math.cos(angle) - y1*Math.sin(angle), x1*Math.sin(angle) + y1*Math.cos(angle));
-        this.v2.setXY(x2*Math.cos(angle) - y2*Math.sin(angle), x2*Math.sin(angle) + y2*Math.cos(angle));
-        this.v3.setXY(x3*Math.cos(angle) - y3*Math.sin(angle), x3*Math.sin(angle) + y3*Math.cos(angle));
-        this.v4.setXY(x4*Math.cos(angle) - y4*Math.sin(angle), x4*Math.sin(angle) + y4*Math.cos(angle));
+        double radAngle = this.angle * Math.PI / 180;
 
-        return;
+        this.v1.setXY(x1*Math.cos(radAngle) - y1*Math.sin(radAngle) + cX, x1*Math.sin(radAngle) + y1*Math.cos(radAngle) + cY);
+        this.v2.setXY(x2*Math.cos(radAngle) - y2*Math.sin(radAngle) + cX, x2*Math.sin(radAngle) + y2*Math.cos(radAngle) + cY);
+        this.v3.setXY(x3*Math.cos(radAngle) - y3*Math.sin(radAngle) + cX, x3*Math.sin(radAngle) + y3*Math.cos(radAngle) + cY);
+        this.v4.setXY(x4*Math.cos(radAngle) - y4*Math.sin(radAngle) + cX, x4*Math.sin(radAngle) + y4*Math.cos(radAngle) + cY);
     }
 
     public void print(){
@@ -131,6 +162,5 @@ public class Rectangle implements Area{
                         "     Rotation="+this.angle+"\n" +
                         "]"
         );
-        return;
     }
 }
