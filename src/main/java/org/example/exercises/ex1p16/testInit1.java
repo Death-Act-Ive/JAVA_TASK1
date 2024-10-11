@@ -2,21 +2,21 @@ package org.example.exercises.ex1p16;
 
 import org.example.geometry.*;
 
-public class testInit {
+public class testInit1 {
     static final Integer LEN = 10; // count of matching objects (array length)
 
     static public Formula[] initFormulasArray(){
         Formula[] formulasArray = new Formula[LEN];
-        formulasArray[0] = Ex1Formulas::f1;
-        formulasArray[1] = Ex1Formulas::f2;
-        formulasArray[2] = Ex1Formulas::f3;
-        formulasArray[3] = Ex1Formulas::f4;
-        formulasArray[4] = Ex1Formulas::f5;
-        formulasArray[5] = Ex1Formulas::f6;
-        formulasArray[6] = Ex1Formulas::f7;
-        formulasArray[7] = Ex1Formulas::f8;
-        formulasArray[8] = Ex1Formulas::f9;
-        formulasArray[9] = Ex1Formulas::f10;
+        formulasArray[0] = ExFormulas::f1;
+        formulasArray[1] = ExFormulas::f2;
+        formulasArray[2] = ExFormulas::f3;
+        formulasArray[3] = ExFormulas::f4;
+        formulasArray[4] = ExFormulas::f5;
+        formulasArray[5] = ExFormulas::f6;
+        formulasArray[6] = ExFormulas::f7;
+        formulasArray[7] = ExFormulas::f8;
+        formulasArray[8] = ExFormulas::f9;
+        formulasArray[9] = ExFormulas::f10;
         return formulasArray;
     }
 

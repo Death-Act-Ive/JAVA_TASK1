@@ -1,10 +1,11 @@
+
 //
 // Ex. 1 p.16-17 formulas
 //
 
 package org.example.exercises.ex1p16;
 
-public class Ex1Formulas {
+public class ExFormulas {
     public static double f1(double x) {
         double y;
         y = Math.asin(
