@@ -1,8 +1,8 @@
 /*
     Author: Arthur Atapin
     Book: https://moodle1.tsutmb.ru/pluginfile.php/1918885/mod_resource/content/1/AndreevAA_Programming_in_Delphi_LW_P1_2010.pdf
-        Solves: [ Ex. 1, p. 16-17 ]
-                [   Ex. 1 p. 24   ]
+        System Solves: [ Ex. 1, p. 16-17 ]
+                       [   Ex. 1 p. 24   ]
  */
 
 package org.example;
@@ -15,10 +15,6 @@ import java.util.Scanner;
 
 
 public class Main {
-
-    // TODO: Add conceptual description  of solving;
-    //
-    // TODO: Add simple doc(?)
 
     public static void main(String[] args) {
         final Scanner in = new Scanner(System.in);

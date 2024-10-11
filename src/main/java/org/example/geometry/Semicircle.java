@@ -65,10 +65,6 @@ public class Semicircle implements Area{
         );
     }
 
-    public void setQuarters(String quarters) {
-        this.quarters = quarters;
-    }
-
     boolean validateQuartersString(String quarters){
         return quarters.matches("[1-4]+");
     }
