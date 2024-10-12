@@ -96,7 +96,7 @@
 
 <DIV>
   <h3>Triangle:</h3>
-  <P>Obtained the only one constructor for a such case:</P>
+  <P>Obtained a few constructors for a such cases:</P>
     <ol>
         <li>When X1, Y1, X2, Y2, X3 and Y3 of Double type are passed.</li>
         <li>When v1, v2 and v3 of Point class are passed.</li>
