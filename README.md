@@ -42,7 +42,7 @@
     The wrapper class for the other figures which makes them more convenient for store in the same array.
     <br>It also defines unite access for their methods and realizes unite point including check method. So it is also polymorhic by object it contains.
     <br>Contains packed object(in Object class) which is unpacked on using by casting to defined in the list.
-    <br>This list makes method call safe but inflexible.
+    <br>This list makes method call safe but less flexible.
     <br>
     <br> <h4><b>WARNING!</b></h4>
         Object used as wrapper only and never extended in inheritance!
