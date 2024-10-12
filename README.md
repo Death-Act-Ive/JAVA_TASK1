@@ -1,9 +1,9 @@
 <DIV>
   <h2>fPoint project.</h2>
-  <b>Functional-point conception:</b>
+  <b>Functional point conception:</b>
     <P>
-      In long perpective, current program makes calculation and of point coordinates more convenient.
-      The main sense of project realized on functional interfaces used to store static method reference assigned to points for their Y-calculations by X coordinates. So it means unite method of referenced calculation is polymorphic.
+      In long perpective, current program makes calculation of point coordinates more convenient.
+      The main sense of project realized on functional interfaces used to store static method reference assigned to points for their Y-calculations by X coordinates. So it means unite method of referenced calculation is implicitly polymorphic.
       Point class and another classes of figures are mostly encapsulated, thereby they are safe in use.
       Solving is also inclued figure unite interface to check point including.
 	  <br>
@@ -20,7 +20,7 @@
 
 <DIV>
   <h3>Point:</h3>
-  <P>Obtained the few constructor for other cases:</P>
+  <P>Obtained the few constructors for other cases:</P>
   <ol>
     <li>When no x and y are passed;</li>
     <li>When only x and y are passed;</li>
@@ -39,7 +39,7 @@
     <li>When object of any type is passed;</li>
   </ol>
   <P>
-    The wrapper class for the other figures which makes them more convenient for store in the same array.
+    The wrapper class for the other figures which makes them more convenient for storing in the same array.
     <br>It also defines unite access for their methods and realizes unite point including check method. So it is also polymorhic by object it contains.
     <br>Contains packed object(in Object class) which is unpacked on using by casting to defined in the list.
     <br>This list makes method call safe but less flexible.
@@ -48,7 +48,7 @@
         Object used as wrapper only and never extended in inheritance!
     <br>
     <br><i>Note</i>:
-    <br><i>Despite this, there was attempts(generics, as example) to realizate dynamic typisation but all of them was restricted by uknown method context.</i>
+    <br><i>Despite this, there was attempts(generics, as example) to realizate dynamic typisation but all of them was restricted by uknown(undefined) method call context.</i>
   </P>
 </DIV>
 
