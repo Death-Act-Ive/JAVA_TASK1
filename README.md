@@ -22,9 +22,9 @@
   <h3>Point:</h3>
   <P>Obtained the few constructors for other cases:</P>
   <ol>
-    <li>When no x and y are passed;</li>
-    <li>When only x and y are passed;</li>
-    <li>When only x and static method reference of y-calculation are passed;</li>
+    <li>When no X and Y are passed;</li>
+    <li>When only X and Y are passed;</li>
+    <li>When only X and static method reference of y-calculation are passed;</li>
   </ol>
   <P>
     The flexible structure of class makes possible to calculate value with changing Y value of point and without it.
@@ -99,7 +99,7 @@
   <P>Obtained a few constructors for a such cases:</P>
     <ol>
         <li>When X1, Y1, X2, Y2, X3 and Y3 of Double type are passed.</li>
-        <li>When v1, v2 and v3 of Point class are passed.</li>
+        <li>When V1, V2 and V3 of Point class are passed.</li>
     </ol>
   <P>
     Realizes triangle object logic with method to check point including.
