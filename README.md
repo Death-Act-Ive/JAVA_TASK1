@@ -48,7 +48,7 @@
         Object used as wrapper only and never extended in inheritance!
     <br>
     <br><i>Note</i>:
-    <br><i>Despite this, there was attempts(generics, as example) to realizate dynamic typisation but all of them was restricted by uknown(undefined) method call context.</i>
+    <br><i>Despite this, there was attempts(generics, as example) to realize dynamic typisation but all of them was restricted by uknown(undefined) method call context.</i>
   </P>
 </DIV>
 
