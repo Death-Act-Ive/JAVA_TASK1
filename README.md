@@ -3,7 +3,7 @@
   <b>Functional point conception:</b>
     <P>
       In long perpective, current program makes calculation of point coordinates more convenient.
-      The main sense of project realized on functional interfaces used to store static method reference assigned to points for their Y-calculations by X coordinates. So it means unite method of referenced calculation is implicitly polymorphic.
+      The main sense of project realized on functional interfaces used to store static method references assigned to points for their Y-calculations by X coordinates. So it means unite method of referenced calculation is implicitly polymorphic.
       Point class and another classes of figures are mostly encapsulated, thereby they are safe in use.
       Solving is also inclued figure unite interface to check point including.
 	  <br>
